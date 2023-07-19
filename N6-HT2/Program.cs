@@ -117,7 +117,7 @@ while (again)
                             Console.WriteLine("\t\tAfter sorting event by date by decreasing order");
                             orderBydateDecreasing(eventDay, evenTime);
                             display(eventDay, evenTime);
-                            break;​
+                            break;
                     }
                     break;
             }
@@ -154,7 +154,7 @@ while (again)
                     isIndex = i;
                 }
             }
-            if (isIndex > 0) Console.WriteLine($"The event you want is -- {eventDay[isIndex]}\nIt's date - {evenTime[isIndex]} and it's index {isIndex}");​
+            if (isIndex > 0) Console.WriteLine($"The event you want is -- {eventDay[isIndex]}\nIt's date - {evenTime[isIndex]} and it's index {isIndex}");
             break;
         case '4':
             break;
@@ -181,7 +181,7 @@ static void orderBynameIncreasing(string[] events, DateTime[] eventsDate)
                 events[j] = name;
                 var date = eventsDate[i];
                 eventsDate[i] = eventsDate[j];
-                eventsDate[j] = date;​
+                eventsDate[j] = date;
             }
         }
     }
@@ -199,7 +199,7 @@ static void orderBynameDecreasing(string[] events, DateTime[] eventsDate)
                 events[j] = name;
                 var date = eventsDate[i];
                 eventsDate[i] = eventsDate[j];
-                eventsDate[j] = date;​
+                eventsDate[j] = date;
             }
         }
     }
@@ -217,7 +217,7 @@ static void orderBydateIncreasing(string[] events, DateTime[] eventsDate)
                 events[j] = name;
                 var date = eventsDate[i];
                 eventsDate[i] = eventsDate[j];
-                eventsDate[j] = date;​
+                eventsDate[j] = date;
             }
         }
     }
@@ -235,7 +235,7 @@ static void orderBydateDecreasing(string[] events, DateTime[] eventsDate)
                 events[j] = name;
                 var date = eventsDate[i];
                 eventsDate[i] = eventsDate[j];
-                eventsDate[j] = date;​
+                eventsDate[j] = date;
             }
         }
     }
