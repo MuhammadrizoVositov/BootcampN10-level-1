@@ -10,3 +10,5 @@ Console.WriteLine(sentense);
 var words=text.Split( " ",10 );
 foreach (var word in words) 
     Console.WriteLine(word);
+
+var firstNameOcuccurance=text.Split( " ",10 );
