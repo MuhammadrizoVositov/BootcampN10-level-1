@@ -12,15 +12,6 @@ var EmailA = new Email
 Console.WriteLine(EmailA);
 
 
-
-
-
-
-
-
-
-
-
 class Email
 {
     private string _to;
