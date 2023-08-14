@@ -2,61 +2,12 @@
 
 
 
+using Mustahkamlash;
 
-var UserA = new User
-{
-    firstName = "Bobur",
-    lastName = "Joraboyev",
-    middleName = "MUrotjon"
-};
-var UserB = new User
-{
-    firstName = "Bobur",
-    lastName = "Joraboyev",
-    middleName = "MUrotjon"
-};
-Console.WriteLine(UserA.Equals(UserB));
+Student<Guid,string> student1=new Student<Guid,string>(Guid.NewGuid),"Akbar","Middle");
 
+Course course1=new Course("Dotnet BootCamp");
 
-class User
+Universtiy<Student<Guid,string> Guid,string> universtiy=new Universtiy<Student<Guid, string> Guid, string>();
+universtiy.EnrollStudent(student1 , course1);
 
-{
-    private string _firstName;
-    private string _lastName;
-    private string _middleName;
-    public string firstName {
-        get => _firstName; 
-        set
-        {
-            _firstName = value;
-        }
-    }
-    public string lastName {
-        get => _lastName;
-        set
-        {
-            _lastName = value;
-        }
-    }
-    public string middleName {
-        get => _middleName;
-        set
-        {
-            _middleName = value;
-        }
-    }
-    public override bool Equals(object? obj)
-    {
-        if(obj is  User us) 
-        {
-            return us.GetHashCode() == this.GetHashCode();
-        }
-        return false;
-    }
-    public override int GetHashCode()
-    {
-        return _firstName.GetHashCode()
-                + _lastName.GetHashCode()
-                +_middleName.GetHashCode();
-    }
-}

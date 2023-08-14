@@ -15,10 +15,7 @@
 //var index =  list.IndexOf(15);
 //Console.WriteLine(index);
 
-
 //var list = new CustomList<int>(10);
-
-
 
 public class CustomList<T> // Generics
 {
@@ -26,7 +23,7 @@ public class CustomList<T> // Generics
 
     public CustomList()
     {
-        _items = new List<T>(); 
+        _items = new List<T>();
     }
 
     public CustomList(int capacity)
@@ -36,9 +33,9 @@ public class CustomList<T> // Generics
 
     public void Add(T item)
     {
+
         _items.Add(item);
     }
-
 
     public void AddRange(IEnumerable<T> items)
     {
@@ -46,7 +43,7 @@ public class CustomList<T> // Generics
 
         //foreach (var item in items)
         //{
-        //    if(_items==)
+        //    if (_items ==)
         //    {
 
         //    }
@@ -69,7 +66,7 @@ public class CustomList<T> // Generics
 
     public int IndexOf(T item)
     {
-        //return _items.IndexOf(item);
+        return _items.IndexOf(item);
 
         for (int index = 0; index < _items.Count; index++)
             if (item.Equals(_items[index]))
@@ -88,7 +85,7 @@ public class CustomList<T> // Generics
         {
             throw new ArgumentException();
         }
-        
+
     }
     public void InsertRange(int index, IEnumerable<T> items)
     {
@@ -97,12 +94,12 @@ public class CustomList<T> // Generics
             Console.WriteLine("Element qoshildi:");
         }
         else
-        { 
+        {
             throw new InvalidOperationException();
         }
 
     }
-    public  bool Remove(T item) 
+    public bool Remove(T item)
     {
         if (_items.Contains(item))
         {
@@ -111,9 +108,9 @@ public class CustomList<T> // Generics
         }
         return false;
     }
-    public bool RemoveAt(int index) 
+    public bool RemoveAt(int index)
     {
-        if(_items.Contains(_items[index]))
+        if (_items.Contains(_items[index]))
         {
             _items.RemoveAt(index);
             return true;
