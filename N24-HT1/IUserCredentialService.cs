@@ -15,6 +15,8 @@ namespace N24_HT1
         }
 
         private List<UserCredentials> _userCredentials = new List<UserCredentials>();
+        internal object Addcredentals;
+
         public void Add(int userId, string password)
         {
             bool hasUpper = false;
@@ -80,4 +82,8 @@ namespace N24_HT1
     }
 
 }
+
+
+
+
 

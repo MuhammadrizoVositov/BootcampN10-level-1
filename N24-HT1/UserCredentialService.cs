@@ -11,7 +11,12 @@ namespace N24_HT1
         private List<UserCredentials>_userCredentialsList;
         public bool AddCredential(string password,string emailAdress)
         {
-            if(!_userCredentialsList.Contains(emailAdress))
+            if (emailAdress is null)
+            {
+                throw new ArgumentNullException(nameof(emailAdress));
+            }
+
+            if (!_userCredentialsList.Contains(emailAdress))
             {
                 _userCredentialsList[emailAdress] = password;
                 return true;

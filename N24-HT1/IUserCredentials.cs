@@ -12,6 +12,8 @@ namespace N24_HT1
     {
         void Add(int userId, int password);
         public string GetByUserId(string userId);
+
+
     }
 
 
