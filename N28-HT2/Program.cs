@@ -8,4 +8,5 @@ var newList = (ClonableList<StorageFile>)list.Clone();
 foreach (var item in newList)
 {
     Console.WriteLine(item);
+
 }
