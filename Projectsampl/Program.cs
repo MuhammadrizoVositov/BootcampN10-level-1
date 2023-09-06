@@ -1,31 +1,36 @@
-﻿//using System;
-
-//Console.WriteLine("Iltimos yoshingizni kiriting:");
-//var age = Convert.ToInt32(Console.ReadLine());
-
-//try
-//{
-//    string num = age switch
-//    {
-//        < 18 => throw new ArgumentOutOfRangeException($"Kechirasz siz juda yoshsiz"),
-//        > 90 => throw new ArgumentOutOfRangeException($"Uzur yoshingiz kattalik qildi:"),
-//        Console.WriteLine("Valid age");
-//    };
-//}
-//catch (ArgumentOutOfRangeException exception)
-//{
-//    Console.WriteLine($"Keshirasz siz juda yoshsiz");
-//    throw;
-//}
+﻿
 
 
 
-//                             String builder
-//var value=string.Empty;
-//for (var index = 0; index < 10000; index++) 
-//value += "s";
-//Console.WriteLine(value);
-//Console.ReadLine();
+using Projectsampl;
+using System.Linq;
+using System.Text.Json;
+
+
+
+string studentPath = @"D:\temp";
+var student = JsonSerializer.Deserialize<List<Student>>
+(File.ReadAllText(studentPath));
+Console.WriteLine(1);
+
+
+
+string locationPath = @"D:\temp";
+var location= JsonSerializer.Deserialize<List<Location>>
+(File.ReadAllText(locationPath));
+
+
+string specialitsPath = @"D:\temp";
+var specialyts= JsonSerializer.Deserialize<List<Specially>>
+(File.ReadAllText(specialitsPath));
+
+var studentGroup = specialyts.GroupJoin(
+    student,
+    specialyts => specialyts.id,
+    student => student.id);
+
+
+var locate=location.Where()
 
 
 

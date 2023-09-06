@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N24_HT1
 {
-    internal class RegistrationService
+    public class RegistrationService
     {
         private IUserCredentialService _credentialService;
         public RegistrationService(IUserCredentialService credentialService)
